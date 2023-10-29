@@ -1,0 +1,73 @@
+{%extends 'base.html'%}
+{%block title_block%}
+<title>home</title>
+{%endblock%}
+{%block body_block%}
+{% load static %}
+
+<div class="container text-center mt-3">
+  <h1>The Highest Standard of Health Care</h1>
+  <p>City Hospital has become one of the renowned names in the highest standard of private health care sector. The design of City Hospital Cochin harmoniously brings together the elements of accessablity, comfort and convenience.</p>
+
+  <hr>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="true" data-bs-interval="1000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner"  data-bs-interval="1000">
+      <div class="carousel-item active">
+        <img src="{%static '/images/car1.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item"  data-bs-interval="1000">
+        <img src="{%static '/images/car2.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item"  data-bs-interval="1000">
+        <img src="{%static '/images/car3.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+ <div class="container ">
+  <div class="row p-3 mt-5">
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <h3 class="mt-4">Our Mission</h3>
+      <hr>
+      <p class="mt-4">Health Promotion, Disease Prevention, Evidence Based Treatment and Quality Care at a Reasonable Cost in Partnership with the Community
+
+      </p>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <h3 class="mt-4">24 Hours Service</h3>
+      <hr>
+<p class="mt-4">City hospital has many unique features, such as the Casualty, Ambulance service, lab service, pharmacy service, emergency service etc..</p>   
+
+      
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <h3 class="mt-4">Our Vision</h3>
+      <hr>
+<p class="mt-4">Health and Wellness of the Community We Serve</p>        
+    
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <h3 class="mt-4">Our Guarantee</h3>
+      <hr>
+<p class="mt-4">We believe that the use of time tested premium quality materials produced by internationally proven suppliers is crucial to long term satisfaction.
+
+</p>        
+      
+    </div>
+  </div>
+ </div>
+{%endblock%}

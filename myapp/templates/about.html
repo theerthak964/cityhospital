@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{%block title_block%}
+<title>about</title>
+{%endblock%}
+{%block body_block%}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/about.css'%}">
+
+
+<div class="container ">
+    <h1 class="text-center  ">About Us</h1>
+    <div class="row bg-dark mt-5  ">
+
+        <img src="{%static '/images/hospital.png'%}" alt="">
+
+    </div>
+
+
+  
+</div>
+<div class="container p-5 mt-5">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+               <h3 >CITY HOSPITAL </h3>
+   <p>"City Hospital" has became a raliable in this area. People have started beleiving in it now, this belief is energy for us. We are continously striving to improve our service further. We work hard to give a better healthcare to the people, so that your faith remains the same.</p>
+   <h3>MISSION</h3>
+<p>The only mission of "City Hospital" to provide better service to the people for less money</p>
+<h3>VISION</h3>
+<p>People should have full faith in this hospital (City Hospital) and there should be no shortage in our service.</p>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+</div>
+{%endblock%}

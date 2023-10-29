@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block title_block%}
+<title>booking</title>
+{%endblock%}
+{%block body_block%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+    $(function() {
+        $("#datepicker").datepicker({ minDate: new Date()});
+    });
+</script>
+<div class="container">
+
+    <div class="row mt-5">
+        <h3 class="text-center">FILL UP THE FORM TO CREATE THE APPOINTMENT</h3>
+        <hr>
+
+        <div class="col"></div>
+        <div class="col mt-3">
+            <form action="" method="post">
+                {%csrf_token%}
+                {{form.as_p}}
+                <input type="submit" value="submit" class="btn btn-success mb-5">
+            
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+{%endblock%}
