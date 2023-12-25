@@ -5,6 +5,7 @@ class bookingForm(forms.ModelForm):
     class Meta:
         model=Booking
         fields="__all__"
+       
         widgets={
             "p_name":forms.TextInput(attrs={"class":"form-control"}),
             "p_phone":forms.TextInput(attrs={"class":"form-control"}),
@@ -15,6 +16,7 @@ class bookingForm(forms.ModelForm):
 
 
         }
+   
 
         labels = {
            'p_name':'Patient Name',

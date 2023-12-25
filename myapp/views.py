@@ -2,28 +2,26 @@ from django.shortcuts import render
 
 from django.shortcuts import render,redirect
 from django.views import View
-from django.views.generic import FormView
+from django.views.generic import ListView,TemplateView
 
 from myapp.models import Deparetment,Docter,Booking
 from myapp.forms import bookingForm
 
-class DocterView(View):
-    def get(self,request,*args,**kwargs):
-        dic_docs={
-            'doctors':Docter.objects.all()
-        }
-        return render(request,'docter.html',dic_docs)
-    
-class DepartmentView(View):
-    def get(self,request,*args,**kwargs):
-        dic_dept={
-            'dept':Deparetment.objects.all()
-        }
-        return render(request,'department.html',dic_dept)  
+class DocterView(ListView):
+    model=Docter
+    template_name="docter.html"
+    context_object_name="doctors"
 
-class AboutView(View):
-    def get(self,request,*args,**kwargs):
-        return render(request,'about.html')
+    
+class DepartmentView(ListView):
+    model=Deparetment
+    template_name="department.html"
+    context_object_name="dept"
+  
+
+class AboutView(TemplateView):
+     template_name="about.html"
+   
 
 class BookingView(View):
         model=Booking
@@ -43,6 +41,6 @@ class BookingView(View):
 
 
 
-class HomeView(View):
-      def get(self,request,*args,**kwargs):
-        return render(request,'home.html')  
+class HomeView(TemplateView):
+     template_name="home.html"
+  

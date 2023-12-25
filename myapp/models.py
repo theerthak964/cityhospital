@@ -1,6 +1,6 @@
 from django.db import models
 
-from django.db import models
+
 
 class Deparetment(models.Model):
     dep_name=models.CharField(max_length=200)
@@ -23,7 +23,7 @@ class Docter(models.Model):
 class Booking(models.Model):
     p_name=models.CharField(max_length=200)
     p_email=models.EmailField()
-    p_phone=models.CharField(max_length=200)
+    p_phone=models.CharField(max_length=10)
     doc_name=models.ForeignKey(Docter,on_delete=models.CASCADE)
     booking_date=models.DateField()
     bookedon=models.DateField(auto_now=True)   
